@@ -110,3 +110,29 @@ img{max-width:100%}
 }
 @media(max-width:560px){.steps,.fgrid{grid-template-columns:1fr}.goal{padding:34px}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+
+/* منع السكرول الجانبي */
+html,body{max-width:100%;overflow-x:hidden;overflow-x:clip}
+#root{overflow-x:clip;max-width:100vw}
+.sec,.hero,.marquee-box{overflow-x:clip}
+
+/* الشريط المتحرك: التكبير والميلة جوه صندوق مقصوص */
+.marquee-box{overflow:hidden;margin-top:-50px;position:relative;z-index:3;padding:14px 0}
+.marquee{margin-top:0;transform:rotate(-1.5deg) scale(1.08)}
+
+/* الأعمدة ما تتمددش أكتر من الشاشة */
+.two{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.fgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+.igrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:860px){
+  .two,.igrid{grid-template-columns:minmax(0,1fr)}
+  .steps,.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .steps,.fgrid{grid-template-columns:minmax(0,1fr)}
+  .big{max-width:100%}
+  .brand{font-size:clamp(2.8rem,15vw,8rem)}
+}
+.wrap,.lead,.fcard,.step,.icard,.goal{min-width:0;overflow-wrap:anywhere}
