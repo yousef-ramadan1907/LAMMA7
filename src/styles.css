@@ -133,6 +133,13 @@ html,body{max-width:100%;overflow-x:hidden;overflow-x:clip}
 @media(max-width:560px){
   .steps,.fgrid{grid-template-columns:minmax(0,1fr)}
   .big{max-width:100%}
+
+
+ /* إصلاح توسيط الهيرو على الموبايل */
+.hero{grid-template-columns:minmax(0,1fr)}
+.hero-in{width:100%;max-width:100%;min-width:0;padding-inline:4vw}
+.tag{max-width:min(30em,100%);margin-inline:auto;text-wrap:balance;overflow-wrap:anywhere}
+.cue span{text-align:center}
   .brand{font-size:clamp(2.8rem,15vw,8rem)}
 }
 .wrap,.lead,.fcard,.step,.icard,.goal{min-width:0;overflow-wrap:anywhere}
